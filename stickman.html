@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Running Stickwoman with Eyes</title>
+  <style>
+    /* Stickwoman container */
+    #stickwoman {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 200px;
+      animation: runAround 5s linear infinite;
+    }
+
+    /* Stickwoman body */
+    #stickwoman .body {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      width: 20px;
+      height: 80px;
+      background-color: black;
+      margin-left: -10px;
+      border-radius: 10px;
+    }
+
+    /* Stickwoman head */
+    #stickwoman .head {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: black;
+      margin-left: -20px;
+      border-radius: 50%;
+    }
+
+    /* Stickwoman eyes */
+    #stickwoman .eye {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    #stickwoman .left-eye {
+      top: 10px;
+      left: 35%;
+    }
+
+    #stickwoman .right-eye {
+      top: 10px;
+      left: 55%;
+    }
+
+    /* Stickwoman skirt */
+    #stickwoman .skirt {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: pink;
+      margin-left: -20px;
+      border-radius: 50%;
+    }
+
+    /* Stickwoman arms */
+    #stickwoman .arm {
+      position: absolute;
+      width: 5px;
+      height: 40px;
+      background-color: black;
+    }
+
+    #stickwoman .left-arm {
+      top: 30px;
+      left: 10px;
+      transform-origin: top center;
+      animation: waveLeft 0.5s infinite alternate;
+    }
+
+    #stickwoman .right-arm {
+      top: 30px;
+      right: 10px;
+      transform-origin: top center;
+      animation: waveRight 0.5s infinite alternate;
+    }
+
+    /* Stickwoman legs */
+    #stickwoman .leg {
+      position: absolute;
+      width: 5px;
+      height: 40px;
+      background-color: black;
+    }
+
+    #stickwoman .left-leg {
+      top: 100px;
+      left: 10px;
+      transform-origin: top center;
+      animation: kickLeft 0.5s infinite alternate;
+    }
+
+    #stickwoman .right-leg {
+      top: 100px;
+      right: 10px;
+      transform-origin: top center;
+      animation: kickRight 0.5s infinite alternate;
+    }
+
+    /* Running Animation */
+    @keyframes runAround {
+      0% {
+        transform: translate(-50%, -50%) translateX(0);
+      }
+      25% {
+        transform: translate(-50%, -50%) translateX(50px);
+      }
+      50% {
+        transform: translate(-50%, -50%) translateX(0);
+      }
+      75% {
+        transform: translate(-50%, -50%) translateX(-50px);
+      }
+      100% {
+        transform: translate(-50%, -50%) translateX(0);
+      }
+    }
+
+    /* Other animations remain unchanged */
+    @keyframes waveLeft {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(30deg);
+      }
+    }
+
+    @keyframes waveRight {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(-30deg);
+      }
+    }
+
+    @keyframes kickLeft {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(-60deg);
+      }
+    }
+
+    @keyframes kickRight {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(60deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Stickwoman HTML structure -->
+  <div id="stickwoman">
+    <div class="body"></div>
+    <div class="head">
+      <div class="eye left-eye"></div>
+      <div class="eye right-eye"></div>
+    </div>
+    <div class="skirt"></div>
+    <div class="arm left-arm"></div>
+    <div class="arm right-arm"></div>
+    <div class="leg left-leg"></div>
+    <div class="leg right-leg"></div>
+  </div>
+</body>
+</html>

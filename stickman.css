@@ -1,0 +1,111 @@
+#stickman {
+  position: relative;
+  width: 100px;
+  height: 200px;
+  margin: 50px auto;
+}
+
+/* Stickman body */
+#stickman .body {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 20px;
+  height: 80px;
+  background-color: black;
+  margin-left: -10px;
+  border-radius: 10px;
+}
+
+/* Stickman head */
+#stickman .head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  margin-left: -20px;
+  border-radius: 50%;
+}
+
+/* Stickman arms */
+#stickman .arm {
+  position: absolute;
+  width: 5px;
+  height: 40px;
+  background-color: black;
+}
+
+#stickman .left-arm {
+  top: 30px;
+  left: 10px;
+  transform-origin: top center;
+  animation: waveLeft 2s infinite alternate;
+}
+
+#stickman .right-arm {
+  top: 30px;
+  right: 10px;
+  transform-origin: top center;
+  animation: waveRight 2s infinite alternate;
+}
+
+/* Stickman legs */
+#stickman .leg {
+  position: absolute;
+  width: 5px;
+  height: 40px;
+  background-color: black;
+}
+
+#stickman .left-leg {
+  top: 100px;
+  left: 10px;
+  transform-origin: top center;
+  animation: kickLeft 1s infinite alternate;
+}
+
+#stickman .right-leg {
+  top: 100px;
+  right: 10px;
+  transform-origin: top center;
+  animation: kickRight 1s infinite alternate;
+}
+
+/* Animations */
+@keyframes waveLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes waveRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes kickLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes kickRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+}
