@@ -1,0 +1,88 @@
+Variable name can contain numbers, digits and characters
+VAriable name should start with a letter.
+can also start with _ and $.
+keywords cannot be variable name.
+keywords cannot be used.
+
+names should be in camel case, fullStackDev
+variable name length sould be 16
+no space
+
+Variables can be declared in 4 ways:
+	1.automatically
+	2.using var
+	3.using let
+	3.using conts
+
+always use const if the value have not be changed
+always use const if the type have not be changed (arrays and objects)
+onely use let, if you can't use const
+var - if must support old browser 
+
+Ex: a variable without a value, has the undefined value
+	let car;
+	  undefined
+	car
+any value can be set undefined
+
+const mySymbol=Symbol();
+it is useful for creating APIs
+when we want to assign a unique identifier to an object
+typeof datatype, is used to find the type of the data
+const obj={firstName:"abc",lastName:"cba"} //Creating of objects
+obj.firstName, obj.lastName //accesing elements in objects
+obj['firstName]// this is also a method of acceseing elements in obj
+typeof obj // this will give the 'object' 
+typeof obj.firstName // this will give 'string' 
+
+Type operator:
+typeOf- returns type of a variable
+instanseof -return true if an object is an instance of an object type
+
+Arrays:
+const arrname=[]
+arrname[0]="one"
+arrname[1]="two"
+(OR)
+const arrname = new Array("one","two","three")
+
+const arr={key1:"first", key2:"second", key3:3}
+for(var x in arr)
+{
+	console.log(arr[x])
+	console.log(x)
+}
+
+
+function functionname(a,b)
+{
+	let k=3;
+	console.log(k);
+	return a+b;
+}
+functionname(4,5)
+op//: 3,9
+//if i give this like this
+console.log(k)//outsidet the function this will not work 
+
+
+types of scope:
+	1.block scope
+	2.global scope
+	3.local scope
+Block scope:
+	{var n=2; }n
+	//op:n will not be accesed outside the block
+
+
+MAP:
+	const map=new Map()
+	undefined
+	map.set("MTS",88)
+	Map(1) {'MTS' => 88}
+	map.set("CSD",55)
+	Map(2) {'MTS' => 88, 'CSD' => 55}
+	map.get("MTS")
+	88
+	map.set("EEE","GF");
+	Map(3) {'MTS' => 88, 'CSD' => 55, 'EEE' => 'GF'}
